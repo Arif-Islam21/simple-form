@@ -6,11 +6,11 @@ import ReuseableForm from "./components/ResueableForm/ReuseableForm";
 // import StatefullFrom from "./components/statefulForm/StatefullFrom";
 
 function App() {
-  const handleSignUpSubmit = (e) => {
-    e.preventDefault();
+  const handleSignUpSubmit = (data) => {
+    console.log("sign up", data);
   };
-  const handleUpdateProfile = (e) => {
-    e.preventDefault();
+  const handleUpdateProfile = (data) => {
+    console.log("updte profile", data);
   };
 
   return (
@@ -24,11 +24,21 @@ function App() {
         formTitle={"Sign Up"}
         SubmitBtnText="Sign Up"
         handleSubmit={handleSignUpSubmit}
-      ></ReuseableForm>
+      >
+        <div>
+          <h2>Sign Up</h2>
+          <p>Plese sign up to continue</p>
+        </div>
+      </ReuseableForm>
       <ReuseableForm
         formTitle={"Profile Update"}
         handleSubmit={handleUpdateProfile}
-      ></ReuseableForm>
+      >
+        <div>
+          <h2>Update Profile</h2>
+          <p>please update your profile </p>
+        </div>
+      </ReuseableForm>
     </>
   );
 }
