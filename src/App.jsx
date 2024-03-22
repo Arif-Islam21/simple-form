@@ -6,6 +6,13 @@ import ReuseableForm from "./components/ResueableForm/ReuseableForm";
 // import StatefullFrom from "./components/statefulForm/StatefullFrom";
 
 function App() {
+  const handleSignUpSubmit = (e) => {
+    e.preventDefault();
+  };
+  const handleUpdateProfile = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <>
       <h1>Vite + React</h1>
@@ -16,8 +23,12 @@ function App() {
       <ReuseableForm
         formTitle={"Sign Up"}
         SubmitBtnText="Sign Up"
+        handleSubmit={handleSignUpSubmit}
       ></ReuseableForm>
-      <ReuseableForm formTitle={"Profile Update"}></ReuseableForm>
+      <ReuseableForm
+        formTitle={"Profile Update"}
+        handleSubmit={handleUpdateProfile}
+      ></ReuseableForm>
     </>
   );
 }

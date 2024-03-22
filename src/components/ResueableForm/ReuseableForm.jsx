@@ -1,5 +1,9 @@
-const ReuseableForm = ({ formTitle, SubmitBtnText = "Submit" }) => {
-  const handleSubmit = (e) => {
+const ReuseableForm = ({
+  formTitle,
+  handleSubmit,
+  SubmitBtnText = "Submit",
+}) => {
+  const handleLocalSubmit = (e) => {
     e.preventDefault();
   };
 
