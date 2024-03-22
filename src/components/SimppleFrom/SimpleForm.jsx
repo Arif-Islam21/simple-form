@@ -1,10 +1,16 @@
 const SimpleForm = () => {
+  const handleSubmit = (e) => {
+    console.log("form submited");
+  };
+
   return (
     <div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <input type="text" />
         <br />
-        <button>Submit</button>
+        {/* <button onSubmit={handleSubmit}>Submit</button>
+         */}
+        <input type="submit" value="submit" />
       </form>
     </div>
   );
